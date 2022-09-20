@@ -37,6 +37,16 @@ ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+input {
+    outline: none;
+    border: 1px solid #000;
+}
+
 .stage {
     width: 100%;
     position: absolute;
@@ -97,12 +107,14 @@ ul {
     justify-content: center;
     align-items: center;
     padding: 8px 16px;
-    transition: all 0.5s;
+    transition: all 0.8s;
+    width: 200px;
 }
 
 .nav-option ul li:hover {
-    background-color: var(--color2);
-    color: var(--color4);
+    /* background-color: var(--color2); */
+    background-image: linear-gradient(to bottom, #295b64, #406e76, #578288, #6e979b, #85acaf, #95b9bb, #a5c7c7, #b5d4d3, #c1dcda, #cee5e2, #dbedea, #e7f6f2);
+    /* color: var(--color4); */
     cursor: pointer;
 }
 
@@ -712,21 +724,28 @@ ul {
 
 /* --------------preOrde------------ */
 
-#preOrder {
+#preOrder-stage > div{
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 100px;
+    background-color: var(--color2);
 }
 
 .form {
     width: 100%;
-    padding: 100px 0;
+    padding: 50px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 70%;
+    font-size: 20px;
+    background-color: var(--color3);
+    border-radius: 20px;
+    color: #000;
 }
 
 .form h1 {
@@ -759,14 +778,159 @@ ul {
     justify-content: center;
     align-items: center;
     position: relative;
+    margin: 20px;
 }
 
 .form_content--unit input {
-    
+    width: 100%;
+    padding: 8px 16px;
+    border-radius: 10px;
 }
 
 .form_content--unit label {
     position: absolute;
-    top: 0;
+    top: -30px;
     left: 0;
+    margin: 0 12px;
+    font-size: 20px;
+}
+
+.notice {
+    height: 200px;
+}
+
+.form_content--unit textarea {
+    border-radius: 10px;
+    border: 1px solid #000;
+    padding: 8px 16px;
+}
+
+.send-preorder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 30px;
+}
+
+.send-preorder p {
+    background-color: #293264;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 15px;
+    width: 80px;
+    text-align: center;
+    transition: all 0.6s;
+}
+
+/* .form input:focus {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.form textarea:focus {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+} */
+
+.form {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+/* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+
+.send-preorder p:hover {
+    background-color: var(--color4);
+    color: #000;
+    cursor: pointer;
+
+}
+
+/* about stage ************************************* */
+
+#about-stage {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.general {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.general_list {
+    /* flex-basis: 70%; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 16px;
+}
+
+.general_unit {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    min-height: 200px;
+}
+
+.general_unit--icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.general_unit--number {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.general_unit--des {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.general_unit--picture {
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.general_unit--picture img {
+    width: 100%;
+}
+
+.keyword {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.keyword h1 {
+    text-align: center;
+    font-size: 48px;
+}
+
+.keyword ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.keyword ul li {
+    padding-left: 80px;
+}
+
+.keyword ul li a {
+    font-size: 20px;
 }
