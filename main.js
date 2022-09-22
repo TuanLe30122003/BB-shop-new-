@@ -9,6 +9,7 @@ const stageBtn = document.querySelectorAll('.stage');
 const homeStage = document.querySelector('#home-stage');
 const preOrderStage = document.querySelector('#preOrder-stage');
 const aboutStage = document.querySelector('#about-stage');
+const membershipStage = document.querySelector('#membership-stage');
 
 
 // click on button to open the stage ********************
@@ -35,6 +36,14 @@ aboutBtn.onclick = function(e) {
     }
 
     aboutStage.style.display = 'block';
+}
+
+membershipBtn.onclick = function(e) {
+    for(var i = 0; i < stageBtn.length; i++) {
+        stageBtn[i].style.display = "none";
+    }
+
+    membershipStage.style.display = 'block';
 }
 // 
 
